@@ -1,0 +1,40 @@
+img{
+    width: 100vw;
+    height: 40vh;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-pages{
+    background-color: #7be079;
+    width: 100%;
+    height: 100vh;
+}
+
+p{
+    background-color: #299f16;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.number-of-customers{
+    margin-top: 50px;
+    
+}
+
+h1{
+    color: #299f15;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+Button{
+    background-color:' #299f16';
+    border: '1px solid  #299f16';
+    border-radius: '10px';
+}
