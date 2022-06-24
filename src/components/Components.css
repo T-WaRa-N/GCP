@@ -12,7 +12,7 @@ img{
 .main-pages{
     background-color: #7be079;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 p{
@@ -20,11 +20,11 @@ p{
     color: #ffffff;
     text-transform: uppercase;
     font-style: italic;
+    padding: 5px;
 }
 
 .number-of-customers{
     margin-top: 50px;
-    
 }
 
 h1{
@@ -37,4 +37,29 @@ Button{
     background-color:' #299f16';
     border: '1px solid  #299f16';
     border-radius: '10px';
+    
+}
+
+.dialogStyle{
+    margin-top: 10%;
+    min-height: 15vh;
+    min-width: 80vw;
+    max-width: 95vw;
+    border: 2px #299f16 solid;
+    background-color: #7be079;
+   }
+
+ .buttonStyle{
+    background-color:#299f16 !important;
+    border: 1px solid  #299f16 !important; 
+    border-radius: 10px; 
+    width: 80%;
+    margin: 5px;
+  }
+
+span{
+    float: right;
+    margin-top: -20px;
+    margin-right: -10px;
+    color: #299f16;
 }
