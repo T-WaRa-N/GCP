@@ -1,4 +1,4 @@
-import React,{ useContext } from 'react';
+import React,{ useContext, useRef, useEffect } from 'react';
 import { Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HomeComponentContext } from './HomeComponent';
@@ -14,8 +14,19 @@ const CustomerComponent = () => {
     const {customerDialog, setCustomerDialog} = useContext(HomeComponentContext); // accessing the state of the parent element
     const closeCustomerDialog = () => {setCustomerDialog(false)}; // Closing the opened dialog
 
+    const dialogRef = useRef()  // referencing within the dialog page
+
+    //handling clickcing outside the dialog box and closing the dialog box
+    useEffect(() =>{
+        let handler = (event) => { if(!dialogRef.current.contains(event.target)) closeCustomerDialog() }
+    
+        document.addEventListener("mousedown", handler)
+
+        return () => { document.removeEventListener("mousedown", handler) }
+    })
+
     return (
-        <dialog open = {customerDialog} className='dialogStyle'>
+        <dialog open = {customerDialog} className='dialogStyle' ref={dialogRef}>
             <span onClick={closeCustomerDialog}>x</span>
             <p>uzozochetyelwa ezintsukwini izintathu</p>
             <form>
