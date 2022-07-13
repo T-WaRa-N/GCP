@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HomeComponentContext } from './HomeComponent';
 
+//internal styling
 const inputStyle = {
     margin: '10px',
     width:'95%',
@@ -23,7 +24,7 @@ const GrassCutterDialog = () => {
         document.addEventListener("mousedown", handler)
 
         return () => { document.removeEventListener("mousedown", handler) }
-    })
+    },[])
 
     return (
         <dialog open = {cutterDialog} className='dialogStyle' ref={dialogRef}>

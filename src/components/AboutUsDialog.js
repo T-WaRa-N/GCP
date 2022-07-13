@@ -16,7 +16,7 @@ const LearnMore = () => {
         document.addEventListener("mousedown", handler)
 
         return () => { document.removeEventListener("mousedown", handler) }
-    })
+    },[])
 
     return (
         <dialog open = {ourDialog} className='dialogStyle' ref={dialogRef}>
